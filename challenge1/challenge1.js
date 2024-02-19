@@ -40,21 +40,21 @@ function isDigit(character) {
 
 // Take a string return true only if every single character in it is a digit
 function isNumericString(value) {
+  console.log(value, typeof value)
   if (typeof value === "string") {
+    
     for (const character of value) {
       if (!isDigit(character)) {
         return false;
       }
     }
     return true;
-  } else {
-    return false;
-  }
+  } 
 }
 
 // TODO: Change the code below to use the isNumericString function
-const primaryValid = typeof primaryPhone === "number";
-const secondaryValid = typeof secondaryPhone === "number";
+/* const primaryValid = typeof primaryPhone === "number";
+const secondaryValid = typeof secondaryPhone === "number"; */
 
-console.log("Primary phone is valid numerical string:", primaryValid);
-console.log("Secondary phone is valid numerical string:", secondaryValid);
+console.log("Primary phone is valid numerical string:", isNumericString(primaryPhone));
+console.log("Secondary phone is valid numerical string:", isNumericString(secondaryPhone));
